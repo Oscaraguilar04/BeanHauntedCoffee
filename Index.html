@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Bean Haunted Coffee</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+</header>
+
+
+  <div id="Hero-Nav">
+  <div class="nav-left">
+    <img src="Images/logo.png" alt="Bean Haunted Coffee Logo" width="200" />
+  </div>
+
+  <div class="nav-right">
+    <a href="tel:+16614370113">
+    <img src="Images/phone.png" alt="Phone Icon" width="50" />
+    </a>
+    <img 
+      src="Images/menus.png" 
+      alt="Menu Icon" 
+      width="50" 
+      id="hamburgerIcon"
+      onclick="toggleMenu()" 
+      style="cursor: pointer;"
+    />
+  </div>
+</div>
+
+<!-- Hidden Menu -->
+<div id="mobileMenu" class="menu">
+  <!-- Close (X) -->
+  <div class="close-btn" id="closeMenu">✕</div>
+
+  <!-- Header -->
+  <h2 class="menu-title">BEAN HAUNTED</h2>
+
+  <!-- Shopping icon (top right) -->
+  <img src="SVGS/Shopping.svg" alt="Shopping Cart" class="shopping-icon" />
+
+  <!-- Navigation links -->
+  <nav class="menu-links">
+    <a href="#menu">Menu</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="#services">Services</a>
+  </nav>
+
+  <!-- Social icons (below links) -->
+  <div class="social-icons">
+    <img src="Images/facebook.png" alt="Facebook" />
+    <img src="Images/tik-tok.png" alt="TikTok" />
+    <img src="Images/instagram.png" alt="Instagram" />
+  </div>
+</div>
+
+
+
+    <div id="Hero-Text">
+
+    <h1>BEAN HAUNTED <br> COFFEE</h1>
+    <h3>Brewing Freights & Delights in Wasco</h3>
+
+    </div>
+
+    <div id="Hero-Button">
+        <h2>Summon your Brew</h2>
+    </div>
+
+    <script>
+    const menu = document.getElementById("mobileMenu");
+    const hamburger = document.getElementById("hamburgerIcon");
+    const closeBtn = document.getElementById("closeMenu");
+
+    function toggleMenu() {
+      menu.classList.toggle("active");
+    }
+
+    // Close menu when clicking outside
+    document.addEventListener("click", (event) => {
+      const clickedInsideMenu = menu.contains(event.target);
+      const clickedHamburger = hamburger.contains(event.target);
+
+      if (!clickedInsideMenu && !clickedHamburger) {
+        menu.classList.remove("active");
+      }
+    });
+
+    // Close when clicking on the X button
+    closeBtn.addEventListener("click", () => {
+      menu.classList.remove("active");
+    });
+
+    // Close when clicking on any link
+    menu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => menu.classList.remove("active"));
+    });
+    </script>
+</body>
+</html>
