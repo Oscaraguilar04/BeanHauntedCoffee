@@ -138,7 +138,7 @@ h1, h3 {
   justify-content: center;
   position: fixed;
   inset: 0; /* covers entire screen */
-  background: radial-gradient(circle at center, #8b3520 0%, #000000 85%);
+  background: radial-gradient(circle at center, #000000 0%, #000000 85%);
   z-index: 3000;
 
   /* spooky vibe */
@@ -173,8 +173,8 @@ h1, h3 {
 
 /* Optional: glow animation for atmosphere */
 @keyframes pulseGlow {
-  0%, 100% { box-shadow: inset 0 0 80px rgba(225, 86, 21, 0.867); }
-  50% { box-shadow: inset 0 0 120px rgba(112, 5, 5, 0.985); }
+  0%, 100% { box-shadow: inset 0 0 80px rgba(89, 10, 117, 0.867); }
+  50% { box-shadow: inset 0 0 120px rgba(245, 149, 40, 0.985); }
 }
 
 .menu.active {
