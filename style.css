@@ -117,18 +117,7 @@ h1, h3 {
 }
 
 
-/* Nav setup */
-#Hero-Nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background-color: black;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
+
 
 /* Fullscreen overlay menu */
 .menu {
