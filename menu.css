@@ -266,13 +266,12 @@ h1, h3 {
 }
 
 .menu-box {
-  width: 45%; /* 48% */
+  width: 48%; 
   background-color: rgba(255, 255, 255, 0.782);
   height: auto;
   padding: 1.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  border-radius: 8px;
   min-height: 470px;
 }
 
