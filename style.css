@@ -328,51 +328,73 @@ h3 {
 }
 
 #My-Story {
-    padding: 20px;
-    text-align: center;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 80px 10%;
+  display: flex;
+  justify-content: center;
 }
 
-.story-header {
-    display: flex;
-    flex-direction: column-reverse;
-    max-width: 100%;
-    gap: 1rem;
+.story-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1200px;
+  width: 100%;
 }
 
-.founder-image,
-.founder-image-2 {
-    margin: 0 auto 1rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+.story-text {
+  flex: 1;
+  max-width: 550px;
 }
 
-#Story-Text {
-    position: relative;
-    max-width: 750px;
-    margin: 0 auto;
-    text-align: left;
-    font-size: 6rem;
-    top: -400px;
-    left: -250px;
-    line-height: 1.6;
-    color: white;
+.story-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
 }
 
-#My-Story{
-  height: 45vh;
+.story-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  color: #ffffff;
+  max-width: 90%;
 }
 
-.founder-image {
-  position: relative;
-  background-color: white;
-  width: 280px;
-  height:420px;
-  right: -245px;
-  top: 150px;
+.story-details {
+  color: #ffffff;
+  font-size: 1rem;
 }
 
-.founder-image-2{
-  width: 280px;
-  position: absolute;
-  right: 200px;
-  top: 3100px;
+.story-text .hidden-text {
+  display: block;
+  margin-top: 12px;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+#Story-Button {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition:  0.3s ease;
+}
+
+#Story-Button:hover {
+  background-color: #fbd83b;
+}
+
+.story-image img {
+  width: 30%;
+  max-width: 500px;
+  border-radius: 8px;
+  object-fit: cover;
 }
