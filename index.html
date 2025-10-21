@@ -85,9 +85,73 @@
        
     </div>
 
-<section id="reviews-section">
-  <div class="reviews-header">
+
+
+  <!-- Your review section -->
+  <section id="reviews-section">
+    <div class="reviews-header">
+      <h2 class="scroll-animate">What Our Customer's <br> are Saying</h2>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">Ana Gómez</div>
+      <div class="review-card">Lucía Herrera</div>
+      <div class="review-card">María Torres</div>
+      <div class="review-card">Sofía Delgado</div>
+    </div>
+  </section>
+</div>
+
+
+<section id="My-Story">
+  <div class="story-header">
     
+    <h1 class="scroll-animate" id="Story-Text">My Story</h1>
+    <!--
+    <p>
+      Turned my passion for coffee into a personal business as a love letter for the community...
+      <span class="hidden-text">
+        I am a mother to two wonderful boys, and my journey into the world of coffee began as a simple desire to create a warm and inviting space where families like mine could gather and enjoy quality brews. What started as a small coffee stand in my neighborhood has blossomed into Bean Haunted Coffee, a place where every cup tells a story of dedication, love, and community spirit.
+      </span>
+    </p>
+    <button id="Story-Button">Read More</button>
+  -->
+    <div class="founder-image"></div>
+    <img src="Images/Coffee2.jpg" alt="Founder Image 2" class="founder-image-2" />
+  </div>
+</section>
+
+
+<section id="Contact-Section">
+ <div class="reviews-header">
+    <h2 class="scroll-animate">Hear From Our Happy Customers!</h2>
+  </div>
+
+  <div class="reviews-grid">
+    <div class="review-card">Ana Gómez</div>
+    <div class="review-card">Lucía Herrera</div>
+    <div class="review-card">María Torres</div>
+    <div class="review-card">Sofía Delgado</div>
+  </div>
+</section>
+
+
+<section id="Services-Section">
+ <div class="reviews-header">
+    <h2 class="scroll-animate">Hear From Our Happy Customers!</h2>
+  </div>
+
+  <div class="reviews-grid">
+    <div class="review-card">Ana Gómez</div>
+    <div class="review-card">Lucía Herrera</div>
+    <div class="review-card">María Torres</div>
+    <div class="review-card">Sofía Delgado</div>
+  </div>
+</section>
+
+<section id="Footer-Section">
+ <div class="reviews-header">
+    <h2 class="scroll-animate">Hear From Our Happy Customers!</h2>
   </div>
 
   <div class="reviews-grid">
@@ -99,66 +163,6 @@
 </section>
 
     
-    <script>
-
-
-    const menu = document.getElementById("mobileMenu");
-    const hamburger = document.getElementById("hamburgerIcon");
-    const closeBtn = document.getElementById("closeMenu");
-
-    function toggleMenu() {
-      menu.classList.toggle("active");
-    }
-
-    // Close menu when clicking outside
-    document.addEventListener("click", (event) => {
-      const clickedInsideMenu = menu.contains(event.target);
-      const clickedHamburger = hamburger.contains(event.target);
-
-      if (!clickedInsideMenu && !clickedHamburger) {
-        menu.classList.remove("active");
-      }
-    });
-
-    // Close when clicking on the X button
-    closeBtn.addEventListener("click", () => {
-      menu.classList.remove("active");
-    });
-
-    // Close when clicking on any link
-    menu.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => menu.classList.remove("active"));
-    });
-
-        
-
-        /* === Cursor Glow Sync === */
-    const syncPointer = ({ x: pointerX, y: pointerY }) => {
-      const x = pointerX.toFixed(2);
-      const y = pointerY.toFixed(2);
-      const xp = (pointerX / window.innerWidth).toFixed(2);
-      const yp = (pointerY / window.innerHeight).toFixed(2);
-      document.documentElement.style.setProperty('--x', x);
-      document.documentElement.style.setProperty('--y', y);
-      document.documentElement.style.setProperty('--xp', xp);
-      document.documentElement.style.setProperty('--yp', yp);
-    };
-    document.body.addEventListener('pointermove', syncPointer);
-
-
-   
-  const fadeElements = document.querySelectorAll('.scroll-fade');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1 });
-
-  fadeElements.forEach(el => observer.observe(el));
-
-    </script>
+<script src="script.js"></script>   
 </body>
 </html>
