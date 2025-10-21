@@ -3,14 +3,16 @@ body {
     background-color: black;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+     font-family: 'Playfair Display', serif;
     color: white; /* ✅ makes all text white by default */
 }
+
 
 /* Navigation bar container */
 #Hero-Nav {
     display: flex;
     justify-content: space-between;
+    font-family: 'Playfair Display', serif;
     align-items: center;
     padding: 20px 60px;
     background-color: #0c0c0c6e;
@@ -287,21 +289,22 @@ h1, h3 {
 
 
 /* === CALM SCROLL DOWN === */
-        .scroll-down {
-            display: flex;
-            position: relative;
-            top: -100px;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.7rem;
-            color: #ccc;
-            animation: calmPulse 3s ease-in-out infinite;
-            margin-top: 3rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05ch;
-            font-weight: 300;
+    .scroll-down {
+    display: flex;
+    position: relative;
+    top: -100px;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    color: #ccc;
+    animation: calmPulse 3s 
+ease-in-out infinite;
+    margin-top: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05ch;
+    font-weight: 300;
         }
 
         .scroll-down .arrow {
@@ -318,3 +321,44 @@ h1, h3 {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(3px); }
         }
+
+
+ /* Layout */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding: 50px;
+    height: 500px;
+}
+
+.review-card {
+  background-color: #2a2a2a; /* light black */
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  transition: transform 0.4s ease, background-color 0.4s ease;
+  height: auto;
+}
+
+/* Hover Effects */
+.review-card:hover {
+  background-color: rgb(255, 255, 255);
+  transform: rotate(3deg);
+  color: black;
+}
+
+/* Scroll Fade Animation */
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

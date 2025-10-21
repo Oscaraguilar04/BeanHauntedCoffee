@@ -17,7 +17,7 @@
 
   <div id="Hero-Nav">
   <div class="nav-left">
-    <h1>BEAN HAUNTED <br> COFFEE</h1>
+    <h1>BEAN HAUNTED <br> COFFEE </h1>
   </div>
 
   <div class="nav-right">
@@ -76,12 +76,29 @@
     </div>
 
 
+   
+
+
     <div class="scroll-down">
-      
+
         <span>scroll down</span>
        
     </div>
 
+<section id="reviews-section">
+  <div class="reviews-header">
+    
+  </div>
+
+  <div class="reviews-grid">
+    <div class="review-card">Ana Gómez</div>
+    <div class="review-card">Lucía Herrera</div>
+    <div class="review-card">María Torres</div>
+    <div class="review-card">Sofía Delgado</div>
+  </div>
+</section>
+
+    
     <script>
 
 
@@ -127,6 +144,21 @@
       document.documentElement.style.setProperty('--yp', yp);
     };
     document.body.addEventListener('pointermove', syncPointer);
+
+
+   
+  const fadeElements = document.querySelectorAll('.scroll-fade');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  fadeElements.forEach(el => observer.observe(el));
+
     </script>
 </body>
 </html>
