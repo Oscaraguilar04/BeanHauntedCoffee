@@ -390,6 +390,13 @@ h3 {
   background-color: #e96513;
 }
 
+#Contact-Hero > h3{
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
 .story-image img{
   flex: 1;
   display: flex;              /* enable flexbox */
@@ -405,3 +412,179 @@ h3 {
   border-radius: 8px;
   object-fit: cover;
 }
+
+.contact-section {
+  background-color: #000000;
+  padding: 2rem;
+  text-align: center;
+  height: 40vh;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.contact-container{
+  justify-content: center;
+  align-items: center;
+  padding-top: 300px;
+}
+
+.contact-section p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #fffefe;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contact-form input[type="email"] {
+  padding: 0.75rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form input[type="submit"] {
+  padding: 0.75rem;
+  background-color: #6f4e37;
+  color: white;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #8b5e3c;
+}
+
+.Service-Section {
+  background-color: #000000;
+  padding: 500px 10% 200px 0;
+  color: white;
+  height: 50vh;
+}
+
+
+.service-header {
+  display: flex;
+  justify-content: center; /* centers the h2 horizontally */
+  margin-bottom: 40px;
+}
+
+.service-header h2 {
+  font-size: 1.8rem;    /* controls text size */
+  font-weight: 700;     /* adjust boldness */
+  max-width: 600px;     /* controls width of text block */
+  line-height: 1.4;     /* improves readability */
+  text-align: center;   /* centers the text inside the h2 itself */
+  margin: 0 auto;       /* ensures the block stays centered */
+}
+
+.service-grid {
+  display: flex;
+  justify-content: center;   /* centers the 3 boxes horizontally */
+  align-items: stretch;      /* makes them equal height */
+  gap: 60px;                 /* space between boxes */
+  flex-wrap: wrap;           /* allows wrapping on smaller screens */
+  margin-top: 40px;
+}
+
+.service-grid div {
+  width: 20%;                /* each box takes up 20% of the width */
+  height: 300px;              /* auto height based on content */
+  background-color: #f7f7f7; /* light background for contrast */
+  border-radius: 12px;       /* rounded corners */
+  padding: 40px 20px;        /* internal spacing */
+  text-align: center;        /* center text inside */
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: all 0.3s ease; /* smooth hover animation */
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* soft shadow */
+}
+
+.service-grid div:hover {
+  transform: scale(1.08);       /* slightly enlarges on hover */
+  background-color: #fff;       /* optional hover brightness */
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1); /* stronger hover shadow */
+}
+
+
+    .footer {
+      background-color: #000;
+      padding: 20px 0;
+      text-align: center;
+      border-top: 1px solid #333;
+    }
+
+    .footer-nav a {
+      display: block;
+      padding: 10px 0;
+      text-decoration: none;
+      color: #ccc;
+      text-transform: uppercase;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    .footer-nav a:hover {
+      color: #e67e22;
+    }
+
+    .footer-social {
+      margin: 20px 0;
+    }
+
+    .footer-social a {
+      margin: 0 10px;
+      color: #ccc;
+      font-size: 24px;
+      transition: color 0.3s;
+    }
+
+    .footer-social a:hover {
+      color: #e67e22;
+    }
+
+    .footer-copyright {
+      padding-top: 10px;
+      border-top: 1px solid #333;
+      font-size: 12px;
+    }
+
+    .footer-copyright a {
+      color: #ccc;
+      text-decoration: none;
+      margin-left: 5px;
+    }
+
+    .footer-copyright a:hover {
+      color: #e67e22;
+    }
+
+    @media (max-width: 414px) {
+      .footer-nav a {
+        font-size: 12px;
+        padding: 8px 0;
+      }
+
+      .footer-social a {
+        font-size: 20px;
+      }
+
+      .footer-copyright {
+        font-size: 10px;
+      }
+    }
