@@ -338,15 +338,13 @@ h3 {
 .story-container {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
-  gap: 60px;
   max-width: 1200px;
   width: 100%;
 }
 
 .story-text {
   flex: 1;
-  max-width: 550px;
+  max-width: 450px;
 }
 
 .story-title {
@@ -372,7 +370,7 @@ h3 {
 .story-text .hidden-text {
   display: block;
   margin-top: 12px;
-  color: #555;
+  color: #e89b44;
   font-size: 1rem;
   line-height: 1.7;
 }
@@ -389,12 +387,21 @@ h3 {
 }
 
 #Story-Button:hover {
-  background-color: #fbd83b;
+  background-color: #e96513;
+}
+
+.story-image img{
+  flex: 1;
+  display: flex;              /* enable flexbox */
+  justify-content: flex-end;    /* centers image horizontally */
+  align-items: center;  
+  padding-top: 100px;
+  padding-left: 100px;      /* centers image vertically */
 }
 
 .story-image img {
-  width: 30%;
-  max-width: 500px;
+  width: 70%;
+  max-width: 300px;
   border-radius: 8px;
   object-fit: cover;
 }
