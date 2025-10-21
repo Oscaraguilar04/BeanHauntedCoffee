@@ -21,13 +21,17 @@
   </div>
 
   <div class="nav-right">
+
+    <!--- 
     <a href="tel:+16612379944">
-    <img src="Images/phone.png" alt="Phone Icon" width="50" />
+    <img src="Images/phone.png" alt="Phone Icon" width="50" font-size="100px" />
     </a>
+    -->
+    
     <img 
-      src="Images/menus.png" 
+      src="Images/menu.png" 
       alt="Menu Icon" 
-      width="50" 
+      width="65" 
       id="hamburgerIcon"
       onclick="toggleMenu()" 
       style="cursor: pointer;"
@@ -69,7 +73,18 @@
 
     <h1>BEAN HAUNTED <br> COFFEE</h1>
 
+    </div>
+
+
+    <div class="scroll-down">
+      
+        <span>scroll down</span>
+       
+    </div>
+
     <script>
+
+
     const menu = document.getElementById("mobileMenu");
     const hamburger = document.getElementById("hamburgerIcon");
     const closeBtn = document.getElementById("closeMenu");
@@ -97,6 +112,8 @@
     menu.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", () => menu.classList.remove("active"));
     });
+
+        
 
         /* === Cursor Glow Sync === */
     const syncPointer = ({ x: pointerX, y: pointerY }) => {
