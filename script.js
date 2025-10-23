@@ -90,3 +90,27 @@ document.addEventListener('DOMContentLoaded', () => {
       button.textContent = hiddenText.classList.contains('visible') ? 'Read Less' : 'Read More';
     });
   });
+
+
+
+   function showMore() {
+      const cards = document.querySelectorAll('.product-card');
+      cards.forEach(card => {
+        if (card.classList.contains('hidden')) {
+          card.classList.remove('hidden');
+        }
+      });
+      document.querySelector('.see-more-btn').style.display = 'none';
+      document.querySelector('.see-less-btn').style.display = 'block';
+    }
+
+    function showLess() {
+      const cards = document.querySelectorAll('.product-card');
+      cards.forEach(card => {
+        if (parseInt(card.getAttribute('data-index')) > 4) {
+          card.classList.add('hidden');
+        }
+      });
+      document.querySelector('.see-more-btn').style.display = 'block';
+      document.querySelector('.see-less-btn').style.display = 'none';
+    }

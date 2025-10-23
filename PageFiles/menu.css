@@ -1,359 +1,179 @@
-/* General reset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 body {
-    background-color: black;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    color: white; /* ✅ makes all text white by default */
+  font-family: 'Poppins', sans-serif;
+  background: #121212;
+  margin: 0;
+  padding: 20px;
+  color: #fff;
 }
 
-/* Navigation bar container */
-#Hero-Nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: #0c0c0c6e;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 1000;
-    color: white; /* ✅ ensures nav text (if any) is also white */
+.container {
+  max-width: 430px; /* iPhone 14 Pro Max width */
+  margin: 0 auto;
+  padding: 10px 200px 10px 10px;
 }
 
-#Hero-Text{
-    color: white;
-    max-width: 1500px;
-    align-content: center;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
 
-/* Left side (logo) */
-.nav-left img {
-    width: 350px;
+.product-card {
+  background: #1E1E1E;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Right side (icons) */
-.nav-right {
-    display: flex;
-    gap: 75px;
-}
 
-.nav-right img {
-    width: 85px;
-    cursor: pointer;
-}
-
-/* Headings and button */
-body > h1, 
-body > h3, 
-#Hero-Button {
-    margin-top: 150px;
-    text-align: center;
-}
-
-/* Optional: Add some glow for visibility on dark backgrounds */
-h1, h3 {
-    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.2);
-}
-
-/* HERO TEXT SECTION */
-#Hero-Text {
-    height: 100vh; /* fills full screen height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* centers vertically */
-    align-items: flex-start; /* aligns text to the left */
-    padding-left: 120px; /* space from the left edge */
-    color: white;
-    text-align: left;
-}
-
-#Hero-Text h1 {
-    font-size: clamp(60px, 10vw, 120px); /* ✅ scales smoothly with screen size */
-    margin: 0;
-    line-height: 1.1;
-    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.2);
-    white-space: nowrap; /* ✅ keeps text all on one line — no wrapping */
-    width: auto;         /* ✅ removes any box constraint */
-    display: block;
-}
-
-#Hero-Text h3 {
-    display: block;      /* ensures it takes a full line */
-    width: 100%;         /* spans entire container width */
-    font-size: 40px;
-    margin-top: 15px;
-    text-align: left;    /* keeps text left-aligned */
-    text-shadow: 1px 1px 6px rgba(255, 255, 255, 0.2);
-}
-
-/* BUTTON BELOW HERO TEXT */
-#Hero-Button {
-    border-radius: 8px;
-    margin-top: -750px; /* pulls it closer to text */
-}
-
-#Hero-Button h2 {
-    background: linear-gradient(135deg, #ff7518, #6a00ff);
-    color: #fff;
-    display: inline-block;
-    padding: 20px 130px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
-    border: 2px solid #ff7518;
-    text-shadow: 0 0 8px rgba(255, 117, 24, 0.6);
-}
-
-#Hero-Button h2:hover {
-    background: linear-gradient(135deg, #ff9a3d, #8a33ff);
-    transform: scale(1.55);
-    -ms-transform-origin-y: 10%;
-    box-shadow: 0 0 20px rgba(255, 117, 24, 0.7);
-}
-
-/* Nav setup */
-#Hero-Nav {
+.product-img {
+  width: 50%;
+  padding-left: 25%;
+  height: 150px;
+  overflow: hidden;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background-color: black;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: -1;
-}
-
-/* Fullscreen overlay menu */
-.menu {
-  display: none;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  position: fixed;
-  inset: 0; /* covers entire screen */
-  background: radial-gradient(circle at center, #000000 0%, #000000 85%);
-  z-index: 3000;
-
-  /* spooky vibe */
-  box-shadow: inset 0 0 80px rgba(255, 80, 0, 0.3);
-  text-align: center;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  opacity: 0;
-  transform: scale(0.95);
+  align-items: center;
 }
 
-/* Menu active (visible) */
-.menu.active {
-  display: flex;
-  opacity: 1;
-  transform: scale(1);
-}
-
-.menu a:hover {
-  color: orange;
-}
-
-/* Links */
-.menu a {
-  color: white;
-  font-size: 4rem;
-  text-decoration: none;
-  margin: 20px 0;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-  letter-spacing: 2px;
-}
-
-.menu a:hover {
-  color: #ff6600;
-  text-shadow: 0 0 15px #ff3300;
-}
-
-/* Optional: glow animation for atmosphere */
-@keyframes pulseGlow {
-  0%, 100% { box-shadow: inset 0 0 80px rgba(89, 10, 117, 0.867); }
-  50% { box-shadow: inset 0 0 120px rgba(245, 149, 40, 0.985); }
-}
-
-.menu.active {
-  animation: pulseGlow 3s infinite ease-in-out;
-}
-
-/* Close (X) button */
-.close-btn {
-  position: absolute;
-  top: 115px;
-  left: 100px;
-  font-size: 4rem;
-  color: #ffffff;
-  cursor: pointer;
-  transition: color 0.3s ease, transform 0.2s ease;
-  z-index: 2;
-}
-
-/* Shopping cart icon */
-.shopping-icon {
-  position: absolute;
-  top: 105px;
-  right: 120px;
-  width: 105px;
-  filter: brightness(0) invert(1);
-  cursor: pointer;
+.product-img img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensure images fit fully without cropping */
   transition: transform 0.3s ease;
 }
 
-.shopping-icon:hover {
-  transform: scale(1.2);
+.product-card:hover .product-img img {
+  transform: scale(1.1); /* Increase image size by 10% on hover */
 }
 
-/* Title styling */
-.menu-title {
-  position: absolute;
-  top: 150px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2.5rem;
-  font-weight: bold;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-.menu-links {
+.product-text {
+  padding: 16px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
 }
 
-.menu-title,
-.menu a {
-  font-family: 'Playfair Display', serif;
+.product-text .category {
+  font-size: 12px;
+  font-weight: 600;
+  color: #00f0ff;
+  text-transform: uppercase;
+  margin-bottom: 8px;
 }
 
-/* Social icons */
-.social-icons {
+.product-text .title {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  margin-top: 60px;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: #fff;
+  width: 100%;
 }
 
-.social-icons img {
-  width: 40px;
-  height: 40px;
-  filter: brightness(0) invert(1);
-  cursor: pointer;
-  transition: transform 0.3s ease, filter 0.3s ease;
+.product-text .price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #00e676; /* Green for coffee price */
 }
 
-.social-icons img:hover {
-  transform: scale(1.2);
-  filter: brightness(1) invert(0);
+.product-text .description {
+  font-size: 12px;
+  color: #b0b0b0;
+  margin: 0 0 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  width: 100%;
 }
 
-/* Menu grid */
-.menu-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 2rem; /* 2rem, padding 1rem */
-  padding: 1rem;
-  margin-top: 750px;
-  background-color: #000000;
-}
-
-.menu-box {
-  width: 48%; 
-  background-color: rgba(255, 255, 255, 0.782);
-  height: auto;
-  padding: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-  min-height: 470px;
-}
-
-@media (max-width: 768px) {
-  .menu-box {
-    width: 100%;
-  }
-}
-
-/* Button container */
-.button-container {
+.button-group {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  margin-top: 200px;
-}
-
-.button-container button {
+  gap: 8px; /* Vertical spacing between buttons */
   width: 100%;
-  padding: 12px;
-  border: none;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
 
-/* Add to Order button */
-.order-btn {
-  background: linear-gradient(135deg, #fffafa, #77f292);
-  color: #080808;
-  box-shadow: 0 0 10px rgba(116, 246, 129, 0.6);
+.buy-btn, .customize-btn {
+  display: block;
+  width: 80%;
+  padding: 5px;
+  padding-left: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.order-btn:hover {
-  background: linear-gradient(135deg, #ff9a3d, #ff7518);
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255, 117, 24, 0.8);
+
+.buy-btn .customize-btn a{
+  padding-right: 50%;
 }
 
-/* Customize button */
+.buy-btn {
+  background: #fff;
+  color: #121212;
+}
+
+.buy-btn:hover {
+  background: #e0e0e0;
+  color: #121212;
+}
+
 .customize-btn {
-  background: linear-gradient(135deg, #6a00ff, #b266ff);
+  background: transparent;
   color: #fff;
-  box-shadow: 0 0 10px rgba(106, 0, 255, 0.6);
+  border: 1px solid #fff;
 }
 
 .customize-btn:hover {
-  background: linear-gradient(135deg, #8a33ff, #d18bff);
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(106, 0, 255, 0.8);
-}
-
-@keyframes sugarPulse {
-  0%, 100% { box-shadow: 0 0 10px rgba(255, 117, 24, 0.6); }
-  50% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); }
-}
-
-.order-btn:hover, .customize-btn:hover {
-  animation: sugarPulse 1.5s infinite ease-in-out;
-}
-
-.menu-box:hover {
-  transform: scale(1.03);
-}
-
-/* Image frame */
-.image-box {
-  width: 100%;
-  height: 490px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border-radius: 10px;
   background: #fff;
+  color: #121212;
 }
 
-.image-box img {
-  width: 100%;
-  height: 100%;
+.see-more-btn, .see-less-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  background: #ffffff;
+  color: #121212;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.see-more-btn:hover, .see-less-btn:hover {
+  background: #ffae36;
+}
+
+.see-less-btn {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+#Menu-Section{
+  padding-right: 100px;
+}
+
+@media screen and (max-width: 430px) {
+  .grid {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+  .product-card {
+    margin: 8px auto;
+  }
 }
