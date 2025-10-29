@@ -1,6 +1,6 @@
 /* General reset */
 body {
-    background-color: black;
+    background-color: #31263e;
     margin: 0;
     padding: 0;
     font-family: 'Playfair Display', serif;
@@ -13,7 +13,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
-    background-color: #0c0c0c6e;
+    background-color: #ffffff00;
     position: fixed;
     top: 75px;
     width: 100%;
@@ -28,11 +28,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 120px;
+    padding-left: 100px;
     text-align: left;
     max-width: 1500px;
     align-content: center;
 }
+
+
 
 #Hero-Text h1 {
     font-size: clamp(60px, 10vw, 120px);
@@ -83,13 +85,7 @@ h1 {
     cursor: pointer;
 }
 
-/* Headings and button */
-body > h1,
-body > h3,
-#Hero-Button {
-    margin-top: 150px;
-    text-align: center;
-}
+
 
 /* Optional: Add some glow for visibility on dark backgrounds */
 h1,
@@ -98,9 +94,22 @@ h3 {
 }
 
 /* BUTTON BELOW HERO TEXT */
-#Hero-Button {
-    border-radius: 8px;
-    margin-top: -750px;
+#Call-to-Action {
+    display: flex;
+    margin-left: 120px;
+    margin-right: auto;
+    justify-content: center;
+    padding: 20px 200px 20px 200px;
+    background-color: #ffffff;
+    border-radius: 100px;
+    margin-top: 100px;
+    color: black;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 #Hero-Button h2 {
@@ -268,6 +277,10 @@ h3 {
     50% { transform: translateY(3px); }
 }
 
+#reviews-section{
+  
+}
+
 /* Layout */
 .reviews-grid {
     display: grid;
@@ -279,7 +292,7 @@ h3 {
 }
 
 .review-card {
-    background-color: #2a2a2a;
+    background-color: #221e22;
     color: white;
     padding: 2rem;
     border-radius: 10px;
@@ -328,7 +341,6 @@ h3 {
 }
 
 #My-Story {
-  background-color: #000000;
   color: #ffffff;
   padding: 80px 10%;
   display: flex;
@@ -338,19 +350,22 @@ h3 {
 .story-container {
   display: flex;
   align-items: flex-start;
+  flex-direction: column;
+  gap: 50px;
   max-width: 1200px;
   width: 100%;
 }
 
 .story-text {
   flex: 1;
-  max-width: 450px;
+  max-width: 750px;
 }
 
 .story-title {
-  font-size: 2.4rem;
+  font-size: 5rem;
   font-weight: 800;
   margin-bottom: 20px;
+  padding-top: 10px;
   letter-spacing: -0.5px;
 }
 
@@ -376,8 +391,8 @@ h3 {
 }
 
 #Story-Button {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #ff6d00;
+  color: white;
   border: none;
   padding: 12px 24px;
   font-size: 1rem;
@@ -407,14 +422,13 @@ h3 {
 }
 
 .story-image img {
-  width: 70%;
-  max-width: 300px;
+  width: 800px;
   border-radius: 8px;
   object-fit: cover;
 }
 
 .contact-section {
-  background-color: #000000;
+ 
   padding: 2rem;
   text-align: center;
   height: 40vh;
@@ -427,6 +441,7 @@ h3 {
 }
 
 .contact-container{
+  border-width: 2px;
   justify-content: center;
   align-items: center;
   padding-top: 300px;
@@ -456,7 +471,7 @@ h3 {
 
 .contact-form input[type="submit"] {
   padding: 0.75rem;
-  background-color: #e88f50;
+  background-color: #ff6d00;
   color: white;
   width: 108%;
   border: none;
@@ -468,14 +483,6 @@ h3 {
 .contact-form input[type="submit"]:hover {
   background-color: #8b5e3c;
 }
-
-.Service-Section {
-  background-color: #000000;
-  padding: 500px 10% 200px 0;
-  color: white;
-  height: 50vh;
-}
-
 
 .service-header {
   display: flex;
@@ -496,7 +503,8 @@ h3 {
   display: flex;
   justify-content: center;   /* centers the 3 boxes horizontally */
   align-items: stretch;      /* makes them equal height */
-  gap: 60px;                 /* space between boxes */
+  gap: 180px;    
+  padding-right: 150px;             /* space between boxes */
   flex-wrap: wrap;           /* allows wrapping on smaller screens */
   margin-top: 40px;
 }
@@ -504,7 +512,6 @@ h3 {
 .service-grid div {
   width: 20%;                /* each box takes up 20% of the width */
   height: 300px;              /* auto height based on content */
-  background-color: #f7f7f7; /* light background for contrast */
   border-radius: 12px;       /* rounded corners */
   padding: 40px 20px;        /* internal spacing */
   text-align: center;        /* center text inside */
@@ -516,14 +523,32 @@ h3 {
 }
 
 .service-grid div:hover {
-  transform: scale(1.08);       /* slightly enlarges on hover */
-  background-color: #fff;       /* optional hover brightness */
+  transform: scale(1.08);       /* slightly enlarges on hover */   /* optional hover brightness */
   box-shadow: 0 4px 14px rgba(0,0,0,0.1); /* stronger hover shadow */
+}
+
+.image-wrapper {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.centered-text {
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 0 20px;
 }
 
 
     .footer {
-      background-color: #000;
+     
       padding: 20px 0;
       text-align: center;
       border-top: 1px solid #333;
@@ -598,22 +623,22 @@ h3 {
 #Menu-Section .container{
   max-width: 430px; /* iPhone 14 Pro Max width */
   margin: 0 auto;
-  padding: 10px 400px 10px 10px;
+  padding: 10px 150px 10px 10px;
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  justify-items: start; /* Align cards to the left */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+    justify-items: center;
 }
 
 .product-card {
-  background: #5d5d5d;
+  background: #221e22;
   overflow: hidden;
   position: relative;
-  height: 600px;
-  width: 400px;
+  height: 900px;
+  width: 600px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -641,7 +666,7 @@ h3 {
 
 .product-text {
   padding: 16px;
-  padding-top: 250px;
+  padding-top: 450px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -653,7 +678,7 @@ h3 {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  font-size: 16px;
+  font-size: 30px;
   font-weight: 700;
   margin: 0 0 8px;
   color: #fff;
@@ -661,7 +686,7 @@ h3 {
 }
 
 .product-text .description {
-  font-size: 12px;
+  font-size: 20px;
   color: #b0b0b0;
   margin: 0 0 12px;
   display: -webkit-box;
@@ -674,7 +699,7 @@ h3 {
 .button-group {
   display: flex;
   flex-direction: column;
-  gap: 8px; /* Vertical spacing between buttons */
+  gap: 10px; /* Vertical spacing between buttons */
   width: 100%;
   align-items: center; /* Center buttons horizontally */
 }
@@ -682,28 +707,27 @@ h3 {
 .buy-btn, .customize-btn {
   display: block;
   width: 80%;
-  padding: 10px; /* Adjusted padding for consistency */
-  font-size: 12px;
+  padding: 20px; /* Adjusted padding for consistency */
+  font-size: 24px;
   font-weight: 600;
   text-decoration: none;
   text-align: center;
-  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .buy-btn {
-  background: #fff;
+  background: #ffffff;
   color: #121212;
 }
 
 .buy-btn:hover {
   background: #e0e0e0;
-  color: #121212;
+  color: #ffffff;
 }
 
 .customize-btn {
   background: transparent;
-  color: #fff;
-  border: 1px solid #fff;
+  color: #fffefe;
+  border: 1px solid #ffffff;
 }
 
 .customize-btn:hover {
