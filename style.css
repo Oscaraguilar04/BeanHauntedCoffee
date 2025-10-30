@@ -654,10 +654,11 @@ h3 {
 
 .product-img img {
   max-width: 100%;
-  position: absolute;
-  height: 100%;
-  object-fit: contain; /* Ensure images fit fully without cropping */
-  transition: transform 0.3s ease;
+    position: absolute;
+    height: 60%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    top: 40px
 }
 
 .product-card:hover .product-img img {
