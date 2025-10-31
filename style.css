@@ -30,21 +30,23 @@ body {
   align-items: center;
   padding: 20px 60px;
   position: fixed;
-  top: 75px;
+  top: 0px;
   width: 100%;
   z-index: 1000;
-  background: transparent;
+  background: #ffffff;
 }
 
 .nav-left h1,
 h1 {
   font-size: 50px;
   margin: 0;
+  color: black;
 }
 
 .nav-right {
   display: flex;
   gap: 75px;
+  flex-direction: row;
 }
 
 .nav-right img {
@@ -107,6 +109,7 @@ h1 {
   font-size: 1.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 #Call-to-Action:hover {
@@ -441,6 +444,7 @@ h1 {
   filter: brightness(0) invert(1);
   cursor: pointer;
   z-index: 2;
+  color: black;
 }
 
 .shopping-icon:hover {
